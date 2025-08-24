@@ -1,6 +1,6 @@
-# Docker Containers Description for Polydraw Project
+# Docker Containers Description for Exalidraw Project
 
-This document describes all Docker containers that are part of the polydraw project.
+This document describes all Docker containers that are part of the Exalidraw project.
 
 ## Main Application Containers
 
@@ -8,14 +8,14 @@ This document describes all Docker containers that are part of the polydraw proj
 - **Image**: Custom built from `./client/Dockerfile`
 - **Port**: `6969:80` (host:container)
 - **Purpose**: Frontend React application
-- **Network**: `polydraw`
+- **Network**: `Exalidraw`
 - **Dependencies**: Depends on server container
 
 ### 2. Server Container
 - **Image**: Custom built from `./server/Dockerfile`
 - **Port**: `8080:8080` (host:container)
 - **Purpose**: Backend Go application
-- **Network**: `polydraw`
+- **Network**: `Exalidraw`
 - **Volumes**: `./server/logs:/app/logs`
 
 ## Observability Stack Containers (Server Directory)
@@ -97,7 +97,7 @@ This document describes all Docker containers that are part of the polydraw proj
 **Total Containers**: 11 containers
 
 **Networks**:
-- `polydraw`: Main application network
+- `Exalidraw`: Main application network
 - `loki`: Observability stack network
 
 **Ports Exposed**:
